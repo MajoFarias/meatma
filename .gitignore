@@ -1,0 +1,81 @@
+# ---------------------------
+# WordPress Core
+# ---------------------------
+/wp-admin/
+/wp-includes/
+/license.txt
+/readme.html
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+
+# ---------------------------
+# Archivos de configuración sensibles
+# ---------------------------
+wp-config.php
+wp-config-local.php
+wp-config*.php
+
+# ---------------------------
+# wp-content (dejamos solo temas y plugins editables)
+# ---------------------------
+wp-content/*
+!wp-content/themes/
+!wp-content/plugins/
+
+# Ignorar todo en uploads
+wp-content/uploads/
+
+# Ignorar plugins que no son tuyos (opcional)
+wp-content/plugins/*
+
+# Mantener solo tu plugin(s) editable(s)
+!wp-content/plugins/tu-plugin-personalizado/
+
+# Mantener solo tu tema
+wp-content/themes/*
+!wp-content/themes/tu-tema-personalizado/
+
+# ---------------------------
+# Sistemas de caché y builds
+# ---------------------------
+cache/
+*.log
+*.tmp
+*.zip
+
+# Node / NPM / Composer (si usas build tools)
+node_modules/
+vendor/
+npm-debug.log*
+yarn-error.log*
+
+# ---------------------------
+# IDE y editor config
+# ---------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# ---------------------------
+# MacOS
+# ---------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ---------------------------
+# Otros
+# ---------------------------
+*.env
+.env.*
