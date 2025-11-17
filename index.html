@@ -35,30 +35,42 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__background" role="presentation"></div>
-      <div class="layout hero__content">
-        <div class="hero__text">
-          <p class="hero__kicker">Max Service</p>
-          <h1 id="hero-title" class="hero__title">Soluciones integrales</h1>
-          <p class="hero__subtitle">Somos una empresa especialista en servicios integrales de limpieza, sanitización y control de plagas para la región.</p>
-          <div class="hero__cta">
-            <a class="button button--primary" href="#contact">Hablemos</a>
-            <a class="button button--ghost" href="#services">Ver servicios</a>
+    <section class="hero-carousel" aria-label="Soluciones destacadas">
+      <div class="owl-carousel hero-carousel__track">
+        <article class="hero-slide" role="group" aria-label="Soluciones integrales">
+          <div class="hero-slide__image" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1500&q=80" alt="Equipo especializado en planta industrial" loading="lazy">
           </div>
-        </div>
-        <div class="hero__metrics" aria-label="Métricas destacadas">
-          <div class="metric-card">
-            <div class="metric-card__icon" aria-hidden="true"><i class="fa-solid fa-building"></i></div>
-            <p class="metric-card__value">+15</p>
-            <p class="metric-card__label">Años de experiencia</p>
+          <div class="hero-slide__shadow" aria-hidden="true"></div>
+          <div class="hero-slide__content layout">
+            <div class="hero-slide__panel">
+              <p class="hero-slide__kicker">Max Service</p>
+              <h1 id="hero-title" class="hero-slide__title">Soluciones integrales</h1>
+              <p class="hero-slide__subtitle">Desde la evaluación, gestión y cumplimiento normativo hasta el desarrollo de proyectos de ingeniería.</p>
+              <div class="hero-slide__cta">
+                <a class="button button--primary" href="#contact">Hablemos</a>
+                <a class="button button--ghost" href="#services">Ver servicios</a>
+              </div>
+            </div>
           </div>
-          <div class="metric-card">
-            <div class="metric-card__icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-            <p class="metric-card__value">24/7</p>
-            <p class="metric-card__label">Seguridad y Resguardo</p>
+        </article>
+        <article class="hero-slide hero-slide--left" role="group" aria-label="Operaciones seguras">
+          <div class="hero-slide__image" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=1500&q=80" alt="Equipo de limpieza industrial operando" loading="lazy">
           </div>
-        </div>
+          <div class="hero-slide__shadow" aria-hidden="true"></div>
+          <div class="hero-slide__content layout">
+            <div class="hero-slide__panel">
+              <p class="hero-slide__kicker">Operaciones seguras</p>
+              <h2 class="hero-slide__title">Expertos en limpieza industrial</h2>
+              <p class="hero-slide__subtitle">Protocolos certificados, supervisión continua y cuadrillas especializadas para cada industria.</p>
+              <div class="hero-slide__cta">
+                <a class="button button--primary" href="#services">Conoce nuestros servicios</a>
+                <a class="button button--ghost" href="#contact">Agenda una reunión</a>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -272,6 +284,20 @@
     (function ($) {
       'use strict';
       $(document).ready(function () {
+        $('.hero-carousel__track').owlCarousel({
+          items: 1,
+          loop: true,
+          dots: true,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 6000,
+          smartSpeed: 900,
+          navText: [
+            '<span aria-hidden="true" class="carousel-nav__icon">‹</span><span class="sr-only">Anterior</span>',
+            '<span aria-hidden="true" class="carousel-nav__icon">›</span><span class="sr-only">Siguiente</span>'
+          ]
+        });
+
         $('.clients__carousel').owlCarousel({
           loop: true,
           margin: 16,
