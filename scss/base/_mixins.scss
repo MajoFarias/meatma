@@ -1,0 +1,25 @@
+@mixin focus-ring {
+  outline: 3px solid $color-outline;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: $radius-pill;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+@mixin glass-panel {
+  background: linear-gradient(135deg, rgba(15, 26, 47, 0.9), rgba(22, 37, 68, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: $shadow-soft;
+  backdrop-filter: blur(6px);
+}

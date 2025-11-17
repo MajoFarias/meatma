@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider accesible con Owl Carousel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-uO3SXgkqcGFKfVqQ9sLuELyhlHLLJoPLD114F8CbnMD4PlzyBbs6k8ZZr68Su2VvulaHYodNs/WSavlJeXnXNw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3jnBOZ3x6iEADVY6jwxKF1u9IiMaivGi99ZHwbbZNL69UQvO1X1sC6yRyvCbagoTssF4pG8d7DaK9HoM/2Ng==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-UTNP5TX7fNfT32xj0H3l6H2q1hIwTZPIYOvToIJMQzmiGAJeZVr3XnhgypKekJy5o+1OtMQwB0yNgtE2yxT4sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <main>
+    <section class="hero" aria-label="Carrusel de soluciones de ingeniería">
+      <div class="hero__inner">
+        <header class="hero__header">
+          <h1 class="hero__headline">Soluciones industriales con enfoque humano</h1>
+          <span class="hero__badge" role="note" aria-label="Certificación en seguridad laboral">
+            <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+            <span>ISO 45001 • Seguridad y prevención</span>
+          </span>
+        </header>
+
+        <div class="hero__carousel js-hero-carousel owl-carousel" role="region" aria-live="polite" aria-roledescription="Carrusel">
+          <article class="hero__slide" data-theme="manufactura">
+            <div class="hero__media">
+              <img src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=1600&q=80" alt="Ingeniera industrial con casco y gafas de seguridad revisando controles" loading="lazy">
+              <span class="hero__overlay" aria-hidden="true"></span>
+            </div>
+            <div class="hero__content">
+              <p class="hero__eyebrow"><i class="fa-solid fa-industry" aria-hidden="true"></i>Manufactura segura</p>
+              <h2 class="hero__title">Soluciones <span class="hero__title--highlight">integrales</span> para la industria</h2>
+              <p class="hero__description">Desde la evaluación, gestión y cumplimiento normativo hasta el desarrollo de proyectos de ingeniería con enfoque en seguridad ocupacional y eficiencia energética.</p>
+              <div class="hero__actions">
+                <a class="hero__cta" href="#" role="button">Conoce nuestros servicios</a>
+                <a class="hero__cta hero__cta--ghost" href="#" role="button">Agenda una cita</a>
+              </div>
+              <div class="hero__meta" aria-hidden="true">
+                <span class="hero__meta-item"><i class="fa-solid fa-circle-check"></i> Cumplimiento normativo</span>
+                <span class="hero__meta-item"><i class="fa-solid fa-gauge-high"></i> Optimización energética</span>
+                <span class="hero__meta-item"><i class="fa-solid fa-handshake-angle"></i> Consultoría 360º</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero__slide" data-theme="energia">
+            <div class="hero__media">
+              <img src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?auto=format&fit=crop&w=1600&q=80" alt="Equipo técnico inspeccionando paneles solares en un parque fotovoltaico" loading="lazy">
+              <span class="hero__overlay" aria-hidden="true"></span>
+            </div>
+            <div class="hero__content">
+              <p class="hero__eyebrow"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i>Energía limpia</p>
+              <h2 class="hero__title">Ingeniería para una transición <span class="hero__title--highlight">sostenible</span></h2>
+              <p class="hero__description">Integración de soluciones de energía renovable, auditorías de eficiencia y monitoreo inteligente para reducir emisiones y costos operativos.</p>
+              <div class="hero__actions">
+                <a class="hero__cta" href="#" role="button">Explorar proyectos</a>
+                <a class="hero__cta hero__cta--ghost" href="#" role="button">Solicitar diagnóstico</a>
+              </div>
+              <div class="hero__meta" aria-hidden="true">
+                <span class="hero__meta-item"><i class="fa-solid fa-leaf"></i> Reducción de huella de carbono</span>
+                <span class="hero__meta-item"><i class="fa-solid fa-bolt"></i> Monitoreo inteligente</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero__slide" data-theme="seguridad">
+            <div class="hero__media">
+              <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=1600&q=80" alt="Ingenieros revisando planos en una refinería" loading="lazy">
+              <span class="hero__overlay" aria-hidden="true"></span>
+            </div>
+            <div class="hero__content">
+              <p class="hero__eyebrow"><i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>Seguridad a11y</p>
+              <h2 class="hero__title">Proyectos críticos con <span class="hero__title--highlight">máxima seguridad</span></h2>
+              <p class="hero__description">Planes de contingencia, inspecciones predictivas y capacitación especializada para operaciones de alto riesgo y ambientes industriales complejos.</p>
+              <div class="hero__actions">
+                <a class="hero__cta" href="#" role="button">Revisa nuestros protocolos</a>
+                <a class="hero__cta hero__cta--ghost" href="#" role="button">Solicita una auditoría</a>
+              </div>
+              <div class="hero__meta" aria-hidden="true">
+                <span class="hero__meta-item"><i class="fa-solid fa-user-shield"></i> Cultura preventiva</span>
+                <span class="hero__meta-item"><i class="fa-solid fa-graduation-cap"></i> Capacitaciones personalizadas</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero__controls" aria-label="Controles del carrusel">
+          <button class="hero__control js-hero-prev" type="button" aria-label="Diapositiva anterior">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button class="hero__control js-hero-next" type="button" aria-label="Diapositiva siguiente">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="hero__dots js-hero-dots" role="tablist" aria-label="Paginación del carrusel"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8nVPU7sF86pp0m6Wy8nXQLE8qsqT9XyM54q9WavH0I1Gtuu6Z9YpBMVYhDYTQF3dQtB0Ug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pCkXz8eA+n3e7zu0rGUNShUMHbVfHzj6pL4YNewhZ0pniS3pSkeCZg2GcqCqNDKn25C5rt0YCT8Qm1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>
