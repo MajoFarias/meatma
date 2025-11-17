@@ -1,0 +1,248 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: $radius-card / 1.2;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &--primary {
+    background: $color-primary;
+    color: $color-surface;
+    border-color: $color-primary;
+
+    &:hover {
+      background: darken($color-primary, 6%);
+    }
+  }
+
+  &--ghost {
+    background: rgba($color-surface, 0.08);
+    color: $color-secondary;
+    border-color: rgba($color-secondary, 0.12);
+
+    &:hover {
+      border-color: $color-secondary;
+      background: rgba($color-secondary, 0.08);
+    }
+  }
+}
+
+.metric-card {
+  @include card;
+  text-align: center;
+  color: $color-secondary;
+  background: rgba($color-surface, 0.94);
+
+  &__icon {
+    font-size: 1.4rem;
+    color: $color-primary;
+  }
+
+  &__value {
+    margin: 0.25rem 0 0.35rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  &__label {
+    margin: 0;
+    color: $color-muted;
+  }
+}
+
+.info-card {
+  display: grid;
+  gap: 0.75rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+    align-items: center;
+    padding: 0.6rem 0.75rem;
+    border-radius: $radius-card / 1.4;
+    background: #f9fafb;
+    border: 1px solid $color-border;
+  }
+
+  &__icon {
+    color: $color-primary;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-secondary;
+  }
+}
+
+.service-card {
+  @include card;
+  display: grid;
+  gap: 0.4rem;
+  min-height: 100%;
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fef2f2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary;
+    font-size: 1.2rem;
+  }
+
+  &__title {
+    margin: 0.5rem 0 0;
+  }
+
+  &__description {
+    margin: 0;
+    color: $color-muted;
+  }
+
+  &__link {
+    font-weight: 700;
+    color: $color-secondary;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.highlight__stats {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.stat {
+  background: $color-surface;
+  padding: 1rem;
+  border-radius: $radius-card;
+  border: 1px solid $color-border;
+  text-align: center;
+
+  &__number {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $color-primary;
+  }
+
+  &__label {
+    margin: 0.2rem 0 0;
+    color: $color-muted;
+  }
+}
+
+.client-card {
+  @include card;
+  text-align: center;
+  min-height: 140px;
+  display: grid;
+  gap: 0.75rem;
+  place-items: center;
+
+  img {
+    max-height: 70px;
+    object-fit: contain;
+  }
+
+  &__label {
+    margin: 0;
+    font-weight: 700;
+  }
+}
+
+.carousel-nav__icon {
+  font-size: 1.2rem;
+  color: $color-secondary;
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: $color-surface !important;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: $shadow-soft;
+}
+
+.owl-nav button.owl-prev {
+  left: -12px;
+}
+
+.owl-nav button.owl-next {
+  right: -12px;
+}
+
+.owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  background: rgba($color-secondary, 0.2);
+}
+
+.owl-dots .owl-dot.active span {
+  background: $color-primary;
+}
+
+.contact__form {
+  @include card;
+  display: grid;
+  gap: 1rem;
+}
+
+.form__group {
+  display: grid;
+  gap: 0.35rem;
+
+  label {
+    font-weight: 700;
+  }
+
+  input,
+  textarea,
+  select {
+    border: 1px solid $color-border;
+    border-radius: $radius-card / 1.4;
+    padding: 0.65rem 0.85rem;
+    font-size: 1rem;
+    font-family: $font-base;
+
+    &:focus-visible {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.12);
+    }
+  }
+}
+
+.form__help {
+  margin: 0;
+  color: $color-muted;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: $color-surface;
+}
+
+.site-footer a:hover {
+  color: lighten($color-primary, 12%);
+}

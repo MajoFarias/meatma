@@ -1,0 +1,17 @@
+$font-base: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$color-primary: #e25a1c;
+$color-secondary: #0f172a;
+$color-surface: #ffffff;
+$color-muted: #4b5563;
+$color-border: #e5e7eb;
+$color-highlight: #fef3c7;
+$shadow-soft: 0 10px 35px rgba(15, 23, 42, 0.08);
+$radius-card: 12px;
+$spacing-unit: 1rem;
+
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px
+);

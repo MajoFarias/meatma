@@ -1,0 +1,101 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-base;
+  color: $color-secondary;
+  background: #f9fafb;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @include focus-ring;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.layout {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 0;
+
+  @include respond(md) {
+    padding: 5rem 0;
+  }
+}
+
+.section__kicker {
+  color: $color-primary;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+}
+
+.section__title {
+  font-size: clamp(1.8rem, 1.2rem + 1vw, 2.6rem);
+  margin: 0 0 1rem;
+  color: $color-secondary;
+}
+
+.section__lead {
+  margin: 0 0 1.75rem;
+  color: $color-muted;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+  background: $color-secondary;
+  color: $color-surface;
+  border-radius: $radius-card;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

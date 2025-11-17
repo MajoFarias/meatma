@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: $radius-card / 1.5;
+  background: $color-highlight;
+  color: $color-secondary;
+  font-weight: 700;
+}

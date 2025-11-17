@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+@mixin respond($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid rgba($color-primary, 0.35);
+  outline-offset: 2px;
+}
+
+@mixin card {
+  background: $color-surface;
+  border-radius: $radius-card;
+  box-shadow: $shadow-soft;
+  padding: $spacing-unit * 1.25;
+}

@@ -1,0 +1,265 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.site-header {
+  background: $color-surface;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__logo {
+    width: 120px;
+    height: auto;
+  }
+
+  &__tagline {
+    font-weight: 600;
+    color: $color-muted;
+    display: none;
+
+    @include respond(md) {
+      display: inline-flex;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+
+    @include respond(md) {
+      gap: 1.25rem;
+    }
+  }
+
+  &__menu-item a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    color: $color-secondary;
+    border-radius: $radius-card / 1.5;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, rgba($color-secondary, 0.9), rgba($color-secondary, 0.75)),
+    url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: $color-surface;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba($color-secondary, 0.75), rgba($color-secondary, 0.55));
+    mix-blend-mode: multiply;
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    padding: 4.5rem 0 4rem;
+
+    @include respond(md) {
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+      padding: 5rem 0 4.5rem;
+    }
+  }
+
+  &__kicker {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    color: lighten($color-primary, 8%);
+  }
+
+  &__title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 1.6rem + 1vw, 3rem);
+    line-height: 1.1;
+  }
+
+  &__subtitle {
+    margin: 0 0 1.5rem;
+    color: rgba($color-surface, 0.92);
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  &__metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+}
+
+.about {
+  &__grid {
+    display: grid;
+    gap: 1.75rem;
+
+    @include respond(md) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    border-radius: $radius-card;
+    overflow: hidden;
+    box-shadow: $shadow-soft;
+  }
+}
+
+.services {
+  background: #f8fafc;
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+
+    @include respond(sm) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include respond(md) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
+
+.highlight {
+  &__grid {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+
+    @include respond(md) {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  &__image {
+    border-radius: $radius-card;
+    overflow: hidden;
+    box-shadow: $shadow-soft;
+  }
+}
+
+.sectors {
+  background: #f8fafc;
+
+  &__inner {
+    display: grid;
+    gap: 2rem;
+
+    @include respond(md) {
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+    }
+  }
+}
+
+.contact {
+  &__grid {
+    display: grid;
+    gap: 2rem;
+
+    @include respond(md) {
+      grid-template-columns: 1fr 1.1fr;
+      align-items: stretch;
+    }
+  }
+
+  &__map iframe {
+    width: 100%;
+    min-height: 320px;
+    border-radius: $radius-card;
+    box-shadow: $shadow-soft;
+  }
+}
+
+.site-footer {
+  background: $color-secondary;
+  color: $color-surface;
+  padding-top: 3rem;
+
+  &__grid {
+    display: grid;
+    gap: 1.5rem;
+
+    @include respond(sm) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include respond(md) {
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__description {
+    color: rgba($color-surface, 0.8);
+  }
+
+  &__title {
+    margin-bottom: 0.75rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  &__bottom {
+    margin-top: 2rem;
+    border-top: 1px solid rgba($color-surface, 0.15);
+  }
+
+  &__bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  &__policy {
+    display: inline-flex;
+    gap: 1rem;
+  }
+}
